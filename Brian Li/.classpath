@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="BlackJackGame"/>
+	<classpathentry kind="src" path="piglatin"/>
+	<classpathentry kind="src" path="chapter_11"/>
+	<classpathentry kind="src" path="chapter_7"/>
+	<classpathentry kind="src" path="chapter_10"/>
+	<classpathentry kind="src" path="piglatin1"/>
+	<classpathentry kind="src" path="pictures_lab"/>
+	<classpathentry kind="src" path="chapter_18"/>
+	<classpathentry kind="src" path="chapter_19"/>
+	<classpathentry kind="src" path="yahtzee"/>
+	<classpathentry kind="src" path="blackjack"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
