@@ -17,8 +17,15 @@ public class Heap
 		swapUp(list.size()-1);
 	}
 
-   public void swapUp(int bot)
-   {
+  public void swapUp(int bot)
+	{
+		while(bot > 0){
+			int child = bot + 1;
+			int parent = child / 2;
+			if(list.get(child - 1) > list.get(parent - 1))
+				swap(child - 1, parent - 1);
+			bot = parent - 1;
+		}
 	}
 
 	public void remove( )
@@ -30,10 +37,34 @@ public class Heap
 
 	public void swapDown(int top)
 	{
+		int curr = 1;
+		int lchild = 2;
+		int rchild = 3;
+		while(rchild <= top){
+			boolean flag = list.get(lchild - 1) > list.get(rchild - 1);
+			if(flag && list.get(curr - 1) < list.get(lchild - 1)){
+				swap(curr - 1, lchild - 1);
+				curr = lchild;
+			}
+			else if(list.get(curr - 1) < list.get(rchild - 1)){
+				swap(curr - 1, rchild - 1);
+				curr = rchild;
+			}
+			else
+				break;
+			lchild = curr * 2;
+			rchild = lchild + 1;
+		}
+		if(lchild <= list.size() && list.get(curr - 1) < list.get(lchild - 1)){
+			swap(curr - 1, lchild - 1);
+		}
 	}
 
 	private void swap(int start, int finish)
 	{
+		int temp = list.get(start);
+		list.set(start, list.get(finish));
+		list.set(finish, temp);
 	}
 
 	public void print()
