@@ -15,7 +15,6 @@ public class BSTreeRunner
  		bst.add(98);
  		bst.add(120);
  		bst.add(85);
-
  		System.out.println("In Order: "); 
  		bst.inOrder();
  		System.out.println("Pre Order: "); 
@@ -38,11 +37,11 @@ public class BSTreeRunner
  		System.out.println("The largest tree node " + bst.maxNode());
  		System.out.println("\n\n");
  		System.out.println("Tree before removing any nodes");
- 		bst.levelOrder();
+ 		bst.inOrder();
  		System.out.println();
  		System.out.println("Tree after removing 90.");
  		bst.remove(90);
- 		bst.levelOrder();
+ 		bst.inOrder();
  		
  		
  		
